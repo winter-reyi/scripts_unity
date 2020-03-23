@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class LeadController : MonoBehaviour
 {
-
     public Vector3 offset;
     public Vector3 bound;
     public float speed = 15;
@@ -28,7 +27,8 @@ public class LeadController : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(nextMovementPoint - transform.position), 1.0f * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation,
+            Quaternion.LookRotation(nextMovementPoint - transform.position), 1.0f * Time.deltaTime);
 
         if (Vector3.Distance(nextMovementPoint, transform.position) <= 10.0f)
         {
