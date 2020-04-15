@@ -108,9 +108,4 @@ public class interaction_3dshow_control : MonoBehaviour
     {
         mPosition = mRotation * new Vector3(0.0F, 0.0F, -Distance) + target.position;
     }
-
-    void GetAsset()
-    {
-        AssetBundle ab = AssetBundle.LoadFromFile(Application.dataPath + "_assetbundles/logos");
-    }
 }
